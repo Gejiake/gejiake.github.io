@@ -28,9 +28,9 @@
         .section-content {
             margin-left: 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .highlight-list {
+            list-style-type: disc; /* 设置实心圆圈 */
+            padding-left: 20px; /* 调整左侧内边距 */
         }
         ul li {
             margin-bottom: 10px;
@@ -47,6 +47,9 @@
         }
         .basic-info {
             flex: 1; /* 使基本信息部分填充剩余空间 */
+        }
+        .highlight {
+            color: #007bff; /* 设置字体颜色 */
         }
     </style>
 </head>
@@ -76,9 +79,9 @@
         <h2 class="section-title">Research Interests</h2>
         <div class="section-content">
             <ul>
-                <li>Artificial Intelligence for Database(AI4DB), i.e., Learned index, Auto-tuning</li>
-                <li>Auto-scaling</li>
-                <li>Time series data prediction</li>
+                <li class="highlight-list">Artificial Intelligence for Database (AI4DB), i.e., Learned index, Auto-tuning</li>
+                <li class="highlight-list">Auto-scaling</li>
+                <li class="highlight-list">Time series data prediction</li>
             </ul>
         </div>
     </div>
@@ -88,7 +91,7 @@
         <h2 class="section-title">Publications</h2>
         <div class="section-content">
             <ul>
-                <li>[1] <strong>Jiake Ge,</strong> Huanchen Zhang, et al. SALI: A Scalable Adaptive Learned Index Framework based on Probability Models[C]//Proceedings of the 2024 ACM international conference on management of data (SIGMOD). <strong>(CCF A)</strong></li>
+                <li>[1] <span class="highlight">[SIGMOD'24]</span> <strong>Jiake Ge,</strong> Huanchen Zhang, et al. SALI: A Scalable Adaptive Learned Index Framework based on Probability Models[C]//Proceedings of the 2024 ACM international conference on management of data (SIGMOD). <strong>(CCF A)</strong></li>
                 <li>[2] <strong>Jiake Ge,</strong> Boyu Shi, et al. Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes[C]//2023 IEEE 39th International Conference on Data Engineering (ICDE). <strong>(CCF A)</strong></li>
                 <li>[3] <strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. WATuning: a workload-aware tuning system with attention-based deep reinforcement learning[J]. Journal of Computer Science and Technology, 2021. <strong>(SCI,CCF B)</strong></li>
                 <li>[4] Yunda Guo, <strong>Jiake Ge,</strong> et al. PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications[C]// 2024 Proceedings of the ACM on Web Conference (WWW). <strong>(CCF A)</strong></li>
