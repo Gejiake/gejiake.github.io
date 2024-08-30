@@ -35,6 +35,11 @@
         ul li {
             margin-bottom: 10px;
         }
+        .photo {
+            max-width: 150px; /* 限制照片宽度 */
+            border-radius: 50%; /* 使照片呈现圆形 */
+            margin-bottom: 20px; /* 照片与下方内容之间的距离 */
+        }
     </style>
 </head>
 <body>
@@ -44,6 +49,8 @@
     <div class="section">
         <h1 class="section-title">Basic Information</h1>
         <div class="section-content">
+            <!-- 添加照片 -->
+            <img src="images/photo.jpg" alt="Profile Photo" class="photo">
             <p><strong>Workplace:</strong> Renmin University of China</p>
             <p><strong>Title:</strong> Associate Professor</p>
             <p><strong>Office:</strong> Room 203, Building 5</p>
