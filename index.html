@@ -35,10 +35,17 @@
         ul li {
             margin-bottom: 10px;
         }
+        .basic-info-container {
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
         .photo {
             max-width: 150px; /* 限制照片宽度 */
             border-radius: 50%; /* 使照片呈现圆形 */
-            margin-bottom: 20px; /* 照片与下方内容之间的距离 */
+            margin-right: 20px; /* 照片与基本信息之间的间距 */
+        }
+        .basic-info {
+            flex: 1; /* 使基本信息部分填充剩余空间 */
         }
     </style>
 </head>
@@ -48,17 +55,19 @@
     <!-- Basic Information Section -->
     <div class="section">
         <h1 class="section-title">Jiake Ge 葛加可</h1>
-        <div class="section-content">
+        <div class="basic-info-container">
             <!-- 添加照片 -->
             <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
-            <p> Associate Professor</p>
-            <p>PhD in School of Information, Renmin University of China</p>
-            <p><strong>Address:</strong> Peiyang Park Campus, Tianjin University
-No.135, Yaguan Road, Tianjin Haihe Education Park
+            <div class="basic-info">
+                <p> Associate Professor</p>
+                <p>PhD in School of Information, Renmin University of China</p>
+                <p><strong>Address:</strong> Peiyang Park Campus, Tianjin University<br>
+No.135, Yaguan Road, Tianjin Haihe Education Park<br>
 Tianjin, China, 300350</p>
-            <p><strong>Office:</strong> Room A417, Building 55</p>
-            <p><strong>Email:</strong> gejiake@tju.edu.cn</p>
-            <p><strong>Phone:</strong> +86 178-1029-1063</p>
+                <p><strong>Office:</strong> Room A417, Building 55</p>
+                <p><strong>Email:</strong> gejiake@tju.edu.cn</p>
+                <p><strong>Phone:</strong> +86 178-1029-1063</p>
+            </div>
         </div>
     </div>
 
@@ -79,13 +88,13 @@ Tianjin, China, 300350</p>
         <h2 class="section-title">Publications</h2>
         <div class="section-content">
             <ul>
-                <li><strong>Jiake Ge,<strong> Huanchen Zhang, et al. SALI: A Scalable Adaptive Learned Index Framework based on Probability Models[C]//Proceedings of the 2024 ACM international conference on management of data (SIGMOD). <strong>(CCF A)<strong></li>
-                <li><strong>Jiake Ge,<strong> Boyu Shi, et al. Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes[C]//2023 IEEE 39th International Conference on Data Engineering (ICDE). <strong>(CCF A)<strong></li>
-                <li><strong>Jiake Ge,<strong> Yanfeng Chai, Yunpeng Chai. WATuning: a workload-aware tuning system with attention-based deep reinforcement learning[J]. Journal of Computer Science and Technology, 2021. <strong>(SCI,CCF B)<strong></li>
-                <li>Yunda Guo, <strong>Jiake Ge,<strong> et al. PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications[C]// 2024 Proceedings of the ACM on Web Conference (WWW). <strong>(CCF A)<strong></li>
-                <li>Yang Liu, Xin Wang, <strong>Jiake Ge,<strong> et al. Text to Graph Query Using Filter Condition Attributes[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024). <strong>Best Paper<strong>.</li>
-                <li>Yanfeng Chai, <strong>Jiake Ge,<strong> et al. Correlation Expert Tuning System for Performance Acceleration[J]. Big Data Research, 2022, 30: 100345. <strong>(SCI)<strong></li>
-                <li>Yanfeng Chai, <strong>Jiake Ge,<strong> et al. Xtuning: Expert database tuning system based on reinforcement learning[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <strong>(CCF C)<strong></li>
+                <li><strong>Jiake Ge,</strong> Huanchen Zhang, et al. SALI: A Scalable Adaptive Learned Index Framework based on Probability Models[C]//Proceedings of the 2024 ACM international conference on management of data (SIGMOD). <strong>(CCF A)</strong></li>
+                <li><strong>Jiake Ge,</strong> Boyu Shi, et al. Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes[C]//2023 IEEE 39th International Conference on Data Engineering (ICDE). <strong>(CCF A)</strong></li>
+                <li><strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. WATuning: a workload-aware tuning system with attention-based deep reinforcement learning[J]. Journal of Computer Science and Technology, 2021. <strong>(SCI,CCF B)</strong></li>
+                <li>Yunda Guo, <strong>Jiake Ge,</strong> et al. PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications[C]// 2024 Proceedings of the ACM on Web Conference (WWW). <strong>(CCF A)</strong></li>
+                <li>Yang Liu, Xin Wang, <strong>Jiake Ge,</strong> et al. Text to Graph Query Using Filter Condition Attributes[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024). <strong>Best Paper</strong>.</li>
+                <li>Yanfeng Chai, <strong>Jiake Ge,</strong> et al. Correlation Expert Tuning System for Performance Acceleration[J]. Big Data Research, 2022, 30: 100345. <strong>(SCI)</strong></li>
+                <li>Yanfeng Chai, <strong>Jiake Ge,</strong> et al. Xtuning: Expert database tuning system based on reinforcement learning[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <strong>(CCF C)</strong></li>
             </ul>
         </div>
     </div>
