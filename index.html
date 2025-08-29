@@ -3,61 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume - Jiake Ge</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Times New Roman', serif;
+            margin: 40px;
             line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
         }
         h1, h2 {
-            color: #333;
+            color: #2c3e50;
+            font-weight: bold;
         }
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         .section {
             margin-bottom: 40px;
         }
         .section-title {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #bdc3c7;
             padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 30px
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .section-content {
             margin-left: 20px;
         }
-        .highlight-list {
-            list-style-type: disc; /* 设置实心圆圈 */
-            padding-left: 20px; /* 调整左侧内边距 */
+        ul, ol {
+            padding-left: 20px;
         }
-        ul li {
+        li {
             margin-bottom: 10px;
         }
         .basic-info-container {
-            display: flex; /* 使用 flexbox 布局 */
-            align-items: center; /* 垂直居中对齐 */
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
         .photo {
-            max-width: 150px; /* 限制照片宽度 */
-            max-height: 243px; /* 限制照片宽度 */
-            <!--border-radius: 100%; /* 使照片呈现圆形--> */
-            margin-right: 40px; /* 照片与基本信息之间的间距 */
+            max-width: 150px;
+            max-height: 243px;
+            border-radius: 8px;
+            margin-right: 40px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         .basic-info {
-            flex: 1; /* 使基本信息部分填充剩余空间 */
+            flex: 1;
         }
         .highlight {
-            color: #B22222; /* 设置字体颜色 */
+            color: #2980b9;
+            font-weight: bold;
         }
         #language-switcher {
             text-align: right;
             margin-bottom: 20px;
+            font-size: 14px;
         }
         .lang-content {
             display: none;
+        }
+        .school-info {
+            display: flex;
+            align-items: center;
+            font-size: 21px;
+            color: #4169E1;
+            margin-bottom: 10px;
+        }
+        .logo {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -66,18 +96,20 @@
     <div id="language-switcher">
         <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
     </div>
-
     <!-- English Content -->
     <div id="en-content" class="lang-content" style="display: block;">
         <!-- Basic Information Section -->
         <div class="section">
             <h1 class="section-title">Jiake Ge (葛加可)</h1>
             <div class="basic-info-container">
-                <!-- 添加照片 -->
+                <!-- Profile Photo -->
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
                 <div class="basic-info">
-                    <p style="font-size: 21px; color: #4169E1;"> <strong>Ph.D, Assistant Professor</strong>, <a href="https://cic.tju.edu.cn/" target="_blank">College of Intelligence and Computing
-            </a>, Tianjin University</p>
+                    <div class="school-info">
+                        <!-- Placeholder for Tianjin University Logo -->
+                        <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
+                        <strong>Ph.D, Assistant Professor</strong>, <a href="https://cic.tju.edu.cn/" target="_blank">College of Intelligence and Computing, Tianjin University</a>
+                    </div>
                     <p><strong>Address:</strong> Peiyang Park Campus, Tianjin University, No.135, Yaguan Road, Tianjin Haihe Education Park, Tianjin, China, 300350</p>
                     <p><strong>Office:</strong> Room A417, Building 55</p>
                     <p><strong>Education:</strong> Ph.D in School of Information, Renmin University of China (Advisor: <a href="http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/06f9baa19a6b43a9897c773886be5702.htm" target="_blank">Yunpeng Chai</a>)</p>
@@ -86,15 +118,15 @@
                 </div>
             </div>
         </div>
-       
+      
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">Research Interests</h2>
             <div class="section-content">
                 <ul>
-                    <li class="highlight-list">Artificial Intelligence for Database (AI4DB), i.e., Learned index, Auto-tuning</li>
-                    <li class="highlight-list">Auto-scaling</li>
-                    <li class="highlight-list">Time series data prediction</li>
+                    <li>Artificial Intelligence for Database (AI4DB), i.e., Learned index, Auto-tuning</li>
+                    <li>Auto-scaling</li>
+                    <li>Time series data prediction</li>
                 </ul>
             </div>
         </div>
@@ -102,18 +134,18 @@
         <div class="section">
             <h2 class="section-title">Publications</h2>
             <div class="section-content">
-                <ul>
-                    <li>[1]. <span class="highlight">[SIGMOD'26]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>High Performance or Low Memory? An Updatable Learned Index Framework for Time-Space Tradeoff.</strong>[C]//Proceedings of the 2026 ACM international conference on management of data. <strong><b> (Corresponding author)</b></strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[2]. <span class="highlight">[WWW'25]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>ShapeShifter: Workload-Aware Adaptive Evolving Index Structures Based on Learned Models.</strong>[C]//The 2025 ACM Web Conference. <strong><b> (Corresponding author)</b></strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[3]. <span class="highlight">[WWW'25]</span> Yiheng You, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>KOE: A Key Distribution-Oriented Performance Estimation Framework for Diverse Index Structures.</strong>[C]//The 2025 ACM Web Conference, short paper. <strong><b> (Corresponding author)</b></strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[4]. <span class="highlight">[SIGMOD'24]</span> <strong>Jiake Ge,</strong> Huanchen Zhang, et al. <strong>SALI: A Scalable Adaptive Learned Index Framework based on Probability Models</strong>[C]//Proceedings of the 2024 ACM international conference on management of data. <span class="highlight">(CCF A)</span></li>
-                    <li>[5]. <span class="highlight">[ICDE'23]</span> <strong>Jiake Ge,</strong> Boyu Shi, et al. <strong>Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes</strong>[C]//2023 IEEE 39th International Conference on Data Engineering. <span class="highlight">(CCF A)</span></li>
-                    <li>[6]. <span class="highlight">[JCST'21]</span> <strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. <strong>WATuning: a workload-aware tuning system with attention-based deep reinforcement learning</strong>[J]. Journal of Computer Science and Technology, 2021. <span class="highlight">(SCI,CCF B)</span></li>
-                    <li>[7]. <span class="highlight">[WWW'24]</span> Yunda Guo, <strong>Jiake Ge,</strong> et al. <strong>PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications</strong>[C]// 2024 Proceedings of the ACM on Web Conference. <span class="highlight">(CCF A)</span></li>
-                    <li>[8]. <span class="highlight">[LSGDA'24]</span> Yang Liu, Xin Wang, <strong>Jiake Ge,</strong> et al. <strong>Text to Graph Query Using Filter Condition Attributes</strong>[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics. <span class="highlight">Best Paper</span>.</li>
-                    <li>[9]. <span class="highlight">[BDR'22]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Correlation Expert Tuning System for Performance Acceleration</strong>[J]. Big Data Research, 2022, 30: 100345. <span class="highlight">(SCI)</span></li>
-                    <li>[10]. <span class="highlight">[WISE'21]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Xtuning: Expert database tuning system based on reinforcement learning</strong>[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <span class="highlight">(CCF C)</span></li>
-                </ul>
+                <ol>
+                    <li><span class="highlight">[SIGMOD'26]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>High Performance or Low Memory? An Updatable Learned Index Framework for Time-Space Tradeoff.</strong>[C]//Proceedings of the 2026 ACM international conference on management of data. <strong>(Corresponding author)</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[WWW'25]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>ShapeShifter: Workload-Aware Adaptive Evolving Index Structures Based on Learned Models.</strong>[C]//The 2025 ACM Web Conference. <strong>(Corresponding author)</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[WWW'25]</span> Yiheng You, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>KOE: A Key Distribution-Oriented Performance Estimation Framework for Diverse Index Structures.</strong>[C]//The 2025 ACM Web Conference, short paper. <strong>(Corresponding author)</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[SIGMOD'24]</span> <strong>Jiake Ge,</strong> Huanchen Zhang, et al. <strong>SALI: A Scalable Adaptive Learned Index Framework based on Probability Models</strong>[C]//Proceedings of the 2024 ACM international conference on management of data. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[ICDE'23]</span> <strong>Jiake Ge,</strong> Boyu Shi, et al. <strong>Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes</strong>[C]//2023 IEEE 39th International Conference on Data Engineering. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[JCST'21]</span> <strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. <strong>WATuning: a workload-aware tuning system with attention-based deep reinforcement learning</strong>[J]. Journal of Computer Science and Technology, 2021. <span class="highlight">(SCI,CCF B)</span></li>
+                    <li><span class="highlight">[WWW'24]</span> Yunda Guo, <strong>Jiake Ge,</strong> et al. <strong>PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications</strong>[C]// 2024 Proceedings of the ACM on Web Conference. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[LSGDA'24]</span> Yang Liu, Xin Wang, <strong>Jiake Ge,</strong> et al. <strong>Text to Graph Query Using Filter Condition Attributes</strong>[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics. <span class="highlight">Best Paper</span>.</li>
+                    <li><span class="highlight">[BDR'22]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Correlation Expert Tuning System for Performance Acceleration</strong>[J]. Big Data Research, 2022, 30: 100345. <span class="highlight">(SCI)</span></li>
+                    <li><span class="highlight">[WISE'21]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Xtuning: Expert database tuning system based on reinforcement learning</strong>[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <span class="highlight">(CCF C)</span></li>
+                </ol>
             </div>
         </div>
         <!-- Projects Section -->
@@ -121,24 +153,27 @@
             <h2 class="section-title">Projects</h2>
             <div class="section-content">
                 <ul>
-                    <li><strong> Tianjin Youth Fund Class B, Vertical Project,</strong> Research on Key Technologies of Subgraph Matching Learning Index Based on Graph Neural Networks, April 2025 to April 2027, In Progress, Principal Investigator</li>
-                    <li><strong> Ant Technology Group Co., Ltd., Horizontal Project,</strong> Construction Project of Demonstration Course for Domestic Distributed Open-Source Database OceanBase, 2024-2026, In Progress, Principal Investigator</li>
-                    <li><strong> Tianda Zhitux (Tianjin) Technology Co., Ltd., Horizontal Project,</strong> Research and Development Project on Distributed Graph Databases Based on Artificial Intelligence, 2024-2026, In Progress, Principal Investigator</li>
+                    <li><strong>Tianjin Youth Fund Class B, Vertical Project,</strong> Research on Key Technologies of Subgraph Matching Learning Index Based on Graph Neural Networks, April 2025 to April 2027, In Progress, Principal Investigator</li>
+                    <li><strong>Ant Technology Group Co., Ltd., Horizontal Project,</strong> Construction Project of Demonstration Course for Domestic Distributed Open-Source Database OceanBase, 2024-2026, In Progress, Principal Investigator</li>
+                    <li><strong>Tianda Zhitux (Tianjin) Technology Co., Ltd., Horizontal Project,</strong> Research and Development Project on Distributed Graph Databases Based on Artificial Intelligence, 2024-2026, In Progress, Principal Investigator</li>
                 </ul>
             </div>
         </div>
     </div>
-
     <!-- Chinese Content -->
     <div id="zh-content" class="lang-content">
         <!-- Basic Information Section -->
         <div class="section">
             <h1 class="section-title">葛加可 (Jiake Ge)</h1>
             <div class="basic-info-container">
-                <!-- 添加照片 -->
+                <!-- Profile Photo -->
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
                 <div class="basic-info">
-                    <p style="font-size: 21px; color: #4169E1;"> <strong>博士，助理教授</strong>，<a href="https://cic.tju.edu.cn/" target="_blank">天津大学智能与计算学部</a></p>
+                    <div class="school-info">
+                        <!-- Placeholder for Tianjin University Logo -->
+                        <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
+                        <strong>博士，助理教授</strong>，<a href="https://cic.tju.edu.cn/" target="_blank">天津大学智能与计算学部</a>
+                    </div>
                     <p><strong>地址：</strong> 天津大学北洋园校区，天津市海河教育园区雅观路135号，天津市，300350</p>
                     <p><strong>办公室：</strong> 55楼A417室</p>
                     <p><strong>教育背景：</strong> 中国人民大学信息学院博士（导师：<a href="http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/06f9baa19a6b43a9897c773886be5702.htm" target="_blank">柴云鹏</a>）</p>
@@ -147,15 +182,15 @@
                 </div>
             </div>
         </div>
-       
+      
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">研究兴趣</h2>
             <div class="section-content">
                 <ul>
-                    <li class="highlight-list">数据库人工智能 (AI4DB)，例如学习索引、自动调优</li>
-                    <li class="highlight-list">自动缩放</li>
-                    <li class="highlight-list">时间序列数据预测</li>
+                    <li>数据库人工智能 (AI4DB)，例如学习索引、自动调优</li>
+                    <li>自动缩放</li>
+                    <li>时间序列数据预测</li>
                 </ul>
             </div>
         </div>
@@ -163,18 +198,18 @@
         <div class="section">
             <h2 class="section-title">发表论文</h2>
             <div class="section-content">
-                <ul>
-                    <li>[1]. <span class="highlight">[SIGMOD'26]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>High Performance or Low Memory? An Updatable Learned Index Framework for Time-Space Tradeoff.</strong>[C]//Proceedings of the 2026 ACM international conference on management of data. <strong>（通讯作者）</strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[2]. <span class="highlight">[WWW'25]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>ShapeShifter: Workload-Aware Adaptive Evolving Index Structures Based on Learned Models.</strong>[C]//The 2025 ACM Web Conference. <strong>（通讯作者）</strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[3]. <span class="highlight">[WWW'25]</span> Yiheng You, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>KOE: A Key Distribution-Oriented Performance Estimation Framework for Diverse Index Structures.</strong>[C]//The 2025 ACM Web Conference, short paper. <strong>（通讯作者）</strong><span class="highlight"> (CCF A)</span></li>
-                    <li>[4]. <span class="highlight">[SIGMOD'24]</span> <strong>Jiake Ge,</strong> Huanchen Zhang, et al. <strong>SALI: A Scalable Adaptive Learned Index Framework based on Probability Models</strong>[C]//Proceedings of the 2024 ACM international conference on management of data. <span class="highlight">(CCF A)</span></li>
-                    <li>[5]. <span class="highlight">[ICDE'23]</span> <strong>Jiake Ge,</strong> Boyu Shi, et al. <strong>Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes</strong>[C]//2023 IEEE 39th International Conference on Data Engineering. <span class="highlight">(CCF A)</span></li>
-                    <li>[6]. <span class="highlight">[JCST'21]</span> <strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. <strong>WATuning: a workload-aware tuning system with attention-based deep reinforcement learning</strong>[J]. Journal of Computer Science and Technology, 2021. <span class="highlight">(SCI,CCF B)</span></li>
-                    <li>[7]. <span class="highlight">[WWW'24]</span> Yunda Guo, <strong>Jiake Ge,</strong> et al. <strong>PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications</strong>[C]// 2024 Proceedings of the ACM on Web Conference. <span class="highlight">(CCF A)</span></li>
-                    <li>[8]. <span class="highlight">[LSGDA'24]</span> Yang Liu, Xin Wang, <strong>Jiake Ge,</strong> et al. <strong>Text to Graph Query Using Filter Condition Attributes</strong>[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics. <span class="highlight">最佳论文</span>.</li>
-                    <li>[9]. <span class="highlight">[BDR'22]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Correlation Expert Tuning System for Performance Acceleration</strong>[J]. Big Data Research, 2022, 30: 100345. <span class="highlight">(SCI)</span></li>
-                    <li>[10]. <span class="highlight">[WISE'21]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Xtuning: Expert database tuning system based on reinforcement learning</strong>[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <span class="highlight">(CCF C)</span></li>
-                </ul>
+                <ol>
+                    <li><span class="highlight">[SIGMOD'26]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>High Performance or Low Memory? An Updatable Learned Index Framework for Time-Space Tradeoff.</strong>[C]//Proceedings of the 2026 ACM international conference on management of data. <strong>（通讯作者）</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[WWW'25]</span> Hui Wang, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>ShapeShifter: Workload-Aware Adaptive Evolving Index Structures Based on Learned Models.</strong>[C]//The 2025 ACM Web Conference. <strong>（通讯作者）</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[WWW'25]</span> Yiheng You, Xin Wang, <strong>Jiake Ge*,</strong> et al. <strong>KOE: A Key Distribution-Oriented Performance Estimation Framework for Diverse Index Structures.</strong>[C]//The 2025 ACM Web Conference, short paper. <strong>（通讯作者）</strong> <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[SIGMOD'24]</span> <strong>Jiake Ge,</strong> Huanchen Zhang, et al. <strong>SALI: A Scalable Adaptive Learned Index Framework based on Probability Models</strong>[C]//Proceedings of the 2024 ACM international conference on management of data. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[ICDE'23]</span> <strong>Jiake Ge,</strong> Boyu Shi, et al. <strong>Cutting Learned Index into Pieces: An In-depth Inquiry into Updatable Learned Indexes</strong>[C]//2023 IEEE 39th International Conference on Data Engineering. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[JCST'21]</span> <strong>Jiake Ge,</strong> Yanfeng Chai, Yunpeng Chai. <strong>WATuning: a workload-aware tuning system with attention-based deep reinforcement learning</strong>[J]. Journal of Computer Science and Technology, 2021. <span class="highlight">(SCI,CCF B)</span></li>
+                    <li><span class="highlight">[WWW'24]</span> Yunda Guo, <strong>Jiake Ge,</strong> et al. <strong>PASS: Predictive Auto-Scaling System for Large-scale Enterprise Web Applications</strong>[C]// 2024 Proceedings of the ACM on Web Conference. <span class="highlight">(CCF A)</span></li>
+                    <li><span class="highlight">[LSGDA'24]</span> Yang Liu, Xin Wang, <strong>Jiake Ge,</strong> et al. <strong>Text to Graph Query Using Filter Condition Attributes</strong>[C]// VLDB 2024 Workshop: 3rd International Workshop on Large-Scale Graph Data Analytics. <span class="highlight">最佳论文</span>.</li>
+                    <li><span class="highlight">[BDR'22]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Correlation Expert Tuning System for Performance Acceleration</strong>[J]. Big Data Research, 2022, 30: 100345. <span class="highlight">(SCI)</span></li>
+                    <li><span class="highlight">[WISE'21]</span> Yanfeng Chai, <strong>Jiake Ge,</strong> et al. <strong>Xtuning: Expert database tuning system based on reinforcement learning</strong>[C]// International Conference on Web Information Systems Engineering, 2021: 101-110. <span class="highlight">(CCF C)</span></li>
+                </ol>
             </div>
         </div>
         <!-- Projects Section -->
@@ -190,12 +225,11 @@
         </div>
     </div>
 </div>
-
 <script>
     function switchLang(lang) {
         document.getElementById('en-content').style.display = (lang === 'en') ? 'block' : 'none';
         document.getElementById('zh-content').style.display = (lang === 'zh') ? 'block' : 'none';
-        document.documentElement.lang = lang; // Optional: Update HTML lang attribute
+        document.documentElement.lang = lang;
     }
 </script>
 </body>
