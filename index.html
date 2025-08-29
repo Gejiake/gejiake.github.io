@@ -27,23 +27,26 @@
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 10px; /* Shortened upper boundary */
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
         }
         .title-group {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
         .section-title {
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-right: 10px; /* Space between title and switcher */
             margin-bottom: 0;
         }
         #language-switcher {
             font-size: 20px;
-            text-align: right;
+            margin-left: 20px; /* A bit to the right */
+            margin-top: 5px; /* A bit below */
         }
         .logo {
             max-width: 200px;
