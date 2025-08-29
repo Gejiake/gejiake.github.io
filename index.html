@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,13 +26,9 @@
         }
         .header {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             margin-bottom: 20px;
-        }
-        #language-switcher {
-            font-size: 20px;
-            text-align: left; /* Align to left */
         }
         .logo {
             max-width: 200px;
@@ -40,13 +36,23 @@
         .section {
             margin-bottom: 40px;
         }
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
         .section-title {
             border-bottom: 2px solid #bdc3c7;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 0;
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+        #language-switcher {
+            font-size: 20px;
+            text-align: right;
         }
         .section-content {
             margin-left: 20px;
@@ -98,16 +104,18 @@
 <body>
 <div class="container">
     <div class="header">
-        <div id="language-switcher">
-            <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
-        </div>
         <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
     </div>
     <!-- English Content -->
-    <div id="en-content" class="lang-content" style="display: block;">
+    <div id="en-content" class="lang-content" style="display: none;">
         <!-- Basic Information Section -->
         <div class="section">
-            <h1 class="section-title">Jiake Ge (葛加可)</h1>
+            <div class="title-row">
+                <h1 class="section-title">Jiake Ge (葛加可)</h1>
+                <div id="language-switcher">
+                    <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
+                </div>
+            </div>
             <div class="basic-info-container">
                 <!-- Profile Photo -->
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
@@ -123,7 +131,7 @@
                 </div>
             </div>
         </div>
-     
+    
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">Research Interests</h2>
@@ -166,10 +174,15 @@
         </div>
     </div>
     <!-- Chinese Content -->
-    <div id="zh-content" class="lang-content">
+    <div id="zh-content" class="lang-content" style="display: block;">
         <!-- Basic Information Section -->
         <div class="section">
-            <h1 class="section-title">葛加可 (Jiake Ge)</h1>
+            <div class="title-row">
+                <h1 class="section-title">葛加可 (Jiake Ge)</h1>
+                <div id="language-switcher">
+                    <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
+                </div>
+            </div>
             <div class="basic-info-container">
                 <!-- Profile Photo -->
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
@@ -185,7 +198,7 @@
                 </div>
             </div>
         </div>
-     
+    
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">研究兴趣</h2>
