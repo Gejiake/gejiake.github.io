@@ -24,6 +24,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #language-switcher {
+            font-size: 14px;
+            text-align: left; /* Align to left */
+        }
+        .logo {
+            max-width: 50px;
+        }
         .section {
             margin-bottom: 40px;
         }
@@ -63,11 +76,6 @@
             color: #2980b9;
             font-weight: bold;
         }
-        #language-switcher {
-            text-align: right;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
         .lang-content {
             display: none;
         }
@@ -77,10 +85,6 @@
             font-size: 21px;
             color: #4169E1;
             margin-bottom: 10px;
-        }
-        .logo {
-            max-width: 50px;
-            margin-right: 10px;
         }
         a {
             color: #2980b9;
@@ -93,8 +97,11 @@
 </head>
 <body>
 <div class="container">
-    <div id="language-switcher">
-        <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
+    <div class="header">
+        <div id="language-switcher">
+            <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
+        </div>
+        <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
     </div>
     <!-- English Content -->
     <div id="en-content" class="lang-content" style="display: block;">
@@ -106,8 +113,6 @@
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
                 <div class="basic-info">
                     <div class="school-info">
-                        <!-- Placeholder for Tianjin University Logo -->
-                        <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
                         <strong>Ph.D, Assistant Professor</strong>, <a href="https://cic.tju.edu.cn/" target="_blank">College of Intelligence and Computing, Tianjin University</a>
                     </div>
                     <p><strong>Address:</strong> Peiyang Park Campus, Tianjin University, No.135, Yaguan Road, Tianjin Haihe Education Park, Tianjin, China, 300350</p>
@@ -118,7 +123,7 @@
                 </div>
             </div>
         </div>
-      
+     
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">Research Interests</h2>
@@ -170,8 +175,6 @@
                 <img src="photo_gjk.jpg" alt="Profile Photo" class="photo">
                 <div class="basic-info">
                     <div class="school-info">
-                        <!-- Placeholder for Tianjin University Logo -->
-                        <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
                         <strong>博士，助理教授</strong>，<a href="https://cic.tju.edu.cn/" target="_blank">天津大学智能与计算学部</a>
                     </div>
                     <p><strong>地址：</strong> 天津大学北洋园校区，天津市海河教育园区雅观路135号，天津市，300350</p>
@@ -182,7 +185,7 @@
                 </div>
             </div>
         </div>
-      
+     
         <!-- Research Interests Section -->
         <div class="section">
             <h2 class="section-title">研究兴趣</h2>
