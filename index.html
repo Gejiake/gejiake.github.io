@@ -55,10 +55,10 @@
         }
         .sidebar {
             position: fixed;
-            left: calc((100vw - 1270px) / 2);
-            top: 60px; /* Approximate height of top-bar */
+            left: calc((100vw - 1320px) / 2);
+            top: 80px; /* Increased for more space from top-bar */
             bottom: 45px; /* Approximate height of footer */
-            width: 250px;
+            width: 300px;
             padding: 20px;
             background-color: #fff;
             overflow-y: auto;
@@ -76,10 +76,10 @@
             margin: 10px 0;
         }
         .main-container {
-            margin-left: calc((100vw - 1270px) / 2 + 290px);
+            margin-left: calc((100vw - 1320px) / 2 + 340px);
             max-width: 900px;
             padding: 40px 40px 80px 40px; /* Extra bottom padding for footer */
-            margin-top: 60px; /* Offset for top-bar */
+            margin-top: 80px; /* Offset for top-bar, increased */
         }
         .section {
             margin-bottom: 40px;
@@ -98,7 +98,7 @@
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 10px;
             margin-bottom: 20px;
-            font-size: 20px;
+            font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -138,17 +138,21 @@
         }
         .recruitment-slogan {
             text-align: center;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 30px;
             color: #000;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
         }
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1350px) {
             .sidebar {
                 left: 0;
             }
             .main-container {
-                margin-left: 290px;
+                margin-left: 340px;
             }
         }
     </style>
