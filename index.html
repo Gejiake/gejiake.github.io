@@ -39,11 +39,7 @@
             align-items: center;
         }
         .top-bar .logo {
-            max-width: 170px;
-        }
-        .slogan-container {
-            flex: 1;
-            text-align: center;
+            max-width: 150px;
         }
         #language-switcher {
             font-size: 16px;
@@ -59,7 +55,7 @@
         }
         .sidebar {
             position: fixed;
-            left: calc((100vw - 1170px) / 2);
+            left: calc((100vw - 1270px) / 2);
             top: 60px; /* Approximate height of top-bar */
             bottom: 45px; /* Approximate height of footer */
             width: 250px;
@@ -80,8 +76,8 @@
             margin: 10px 0;
         }
         .main-container {
-            margin-left: calc((100vw - 1170px) / 2 + 290px);
-            max-width: 800px;
+            margin-left: calc((100vw - 1270px) / 2 + 290px);
+            max-width: 900px;
             padding: 40px 40px 80px 40px; /* Extra bottom padding for footer */
             margin-top: 60px; /* Offset for top-bar */
         }
@@ -141,21 +137,13 @@
             z-index: 1001;
         }
         .recruitment-slogan {
+            text-align: center;
             font-size: 20px;
             font-weight: bold;
-            animation: color-flash 2s infinite alternate;
+            margin-bottom: 30px;
+            color: #000;
         }
-        @keyframes color-flash {
-            0% {
-                color: red;
-                text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-            }
-            100% {
-                color: black;
-                text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            }
-        }
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1300px) {
             .sidebar {
                 left: 0;
             }
@@ -169,10 +157,6 @@
     <div class="top-bar">
         <div class="title-group">
             <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
-        </div>
-        <div class="slogan-container">
-            <div id="recruitment-en" class="recruitment-slogan" style="display: none;">Recruiting Master's students for 2026, welcome students interested in my research directions to contact me!</div>
-            <div id="recruitment-zh" class="recruitment-slogan" style="display: block;">招收2026年硕士研究生，欢迎对我研究方向感兴趣的同学与我联系！</div>
         </div>
         <div id="language-switcher">
             <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a>
@@ -206,6 +190,7 @@
     <div class="main-container">
         <!-- English Content -->
         <div id="en-content" class="lang-content" style="display: none;">
+            <div class="recruitment-slogan">Recruiting Master's students for 2026, welcome students interested in my research directions to contact me!</div>
             <div class="introduction">
                 Jiake Ge is an Assistant Researcher at the College of Intelligence and Computing, Tianjin University, Executive Committee Member of CCF Database Committee, Executive Committee Member of CCF Information System Committee. He has long been engaged in research on intelligent database technology (AI4DB) and database systems. He has published more than 10 papers in important domestic and international academic conferences and journals such as SIGMOD, ICDE, WWW, and served as a reviewer for journals and conferences such as TKDE. He has been selected for the 2025 China Computer Federation Information System Committee Doctoral Dissertation Incentive Program, 2025 National Postdoctoral Researcher Funding Program, the 3rd Batch of China Postdoctoral Science Foundation and Tianjin Joint Funding (Special Funding), Tianjin Postdoctoral Innovation Position Funding, Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024), Renmin University of China Outstanding Funded Innovative Talent Program. He hosts one provincial-level project and one teaching reform project.
             </div>
@@ -248,6 +233,7 @@
         </div>
         <!-- Chinese Content -->
         <div id="zh-content" class="lang-content" style="display: block;">
+            <div class="recruitment-slogan">招收2026年硕士研究生，欢迎对我研究方向感兴趣的同学与我联系！</div>
             <div class="introduction">
                 葛加可，天津大学智能与计算学部助理研究员，2024年于中国人民大学获得博士学位，师从<a href="http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/06f9baa19a6b43a9897c773886be5702.htm" target="_blank">柴云鹏</a>教授。现担任CCF数据库专委与信息系统专委执行委员。长期致力于智能数据库技术（AI4DB）及数据库系统的研究，在SIGMOD、ICDE、WWW等国内外重要学术会议和期刊发表论文10余篇，并担任TKDE等期刊及会议的审稿人。入选2025年中国计算机学会信息系统专委会博士学位论文激励计划、国家资助博士后研究人员计划、中国博士后科学基金会与天津市联合资助（特别资助）、天津市博士后创新岗位资助，并获得第3届大规模图数据分析国际研讨会（LSGDA 2024）最佳论文奖、中国人民大学拔尖创新人才计划资助。主持省部级科研项目一项、教学改革项目一项。
             </div>
@@ -298,8 +284,6 @@
             document.getElementById('zh-content').style.display = (lang === 'zh') ? 'block' : 'none';
             document.getElementById('sidebar-en').style.display = (lang === 'en') ? 'block' : 'none';
             document.getElementById('sidebar-zh').style.display = (lang === 'zh') ? 'block' : 'none';
-            document.getElementById('recruitment-en').style.display = (lang === 'en') ? 'block' : 'none';
-            document.getElementById('recruitment-zh').style.display = (lang === 'zh') ? 'block' : 'none';
             document.documentElement.lang = lang;
         }
     </script>
