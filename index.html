@@ -157,6 +157,39 @@
                 margin-left: 380px;
             }
         }
+        @media screen and (max-width: 768px) {
+            .top-bar {
+                padding: 10px 20px; /* Smaller padding for mobile */
+            }
+            .top-bar .logo {
+                max-width: 120px; /* Smaller logo for mobile */
+            }
+            .sidebar {
+                position: relative; /* Change to relative for stacking */
+                width: 100%;
+                left: auto;
+                top: auto;
+                bottom: auto;
+                padding: 20px;
+                overflow-y: visible;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                margin-top: 60px; /* Offset for top-bar on mobile */
+                z-index: auto;
+            }
+            .sidebar .photo {
+                max-width: 200px; /* Adjust photo size for mobile */
+            }
+            .main-container {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 20px;
+                margin-top: 0; /* No extra top margin since sidebar is above */
+            }
+            .footer {
+                padding: 10px 20px; /* Smaller padding for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -165,7 +198,7 @@
             <img src="tju_logo.png" alt="Tianjin University Logo" class="logo">
         </div>
         <div id="language-switcher">
-<!--             <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a> -->
+<!-- <a href="#" onclick="switchLang('en')">English</a> | <a href="#" onclick="switchLang('zh')">中文</a> -->
             <a href="#" onclick="switchLang('zh')"><strong>中文</strong></a> | <a href="#" onclick="switchLang('en')"><strong>English</strong></a>
         </div>
     </div>
@@ -195,7 +228,7 @@
         <!-- English Content -->
         <div id="en-content" class="lang-content" style="display: none;">
            <div class="introduction">
-<!--                 <strong>Jiake Ge</strong> is an Assistant Researcher at <a href="https://cic.tju.edu.cn/" target="_blank">the College of Intelligence and Computing, Tianjin University</a>, Executive Committee Member of CCF Database Committee, Executive Committee Member of CCF Information System Committee. He has long been engaged in research on intelligent database technology (AI4DB) and database systems. He has published more than 10 papers in important domestic and international academic conferences and journals such as SIGMOD, ICDE, WWW, and served as a reviewer for journals and conferences such as TKDE, WWW, KBS, etc. He has been selected for the 2025 China Computer Federation Information System Committee Doctoral Dissertation Incentive Program, 2025 National Postdoctoral Researcher Funding Program, the 3rd Batch of China Postdoctoral Science Foundation and Tianjin Joint Funding (Special Funding), Tianjin Postdoctoral Innovation Position Funding, Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024), Renmin University of China Outstanding Funded Innovative Talent Program. He hosts one provincial-level project and one teaching reform project. -->
+<!-- <strong>Jiake Ge</strong> is an Assistant Researcher at <a href="https://cic.tju.edu.cn/" target="_blank">the College of Intelligence and Computing, Tianjin University</a>, Executive Committee Member of CCF Database Committee, Executive Committee Member of CCF Information System Committee. He has long been engaged in research on intelligent database technology (AI4DB) and database systems. He has published more than 10 papers in important domestic and international academic conferences and journals such as SIGMOD, ICDE, WWW, and served as a reviewer for journals and conferences such as TKDE, WWW, KBS, etc. He has been selected for the 2025 China Computer Federation Information System Committee Doctoral Dissertation Incentive Program, 2025 National Postdoctoral Researcher Funding Program, the 3rd Batch of China Postdoctoral Science Foundation and Tianjin Joint Funding (Special Funding), Tianjin Postdoctoral Innovation Position Funding, Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024), Renmin University of China Outstanding Funded Innovative Talent Program. He hosts one provincial-level project and one teaching reform project. -->
                 I am <strong>Jiake Ge</strong>, an Assistant Researcher at <a href="https://cic.tju.edu.cn/" target="_blank">the College of Intelligence and Computing, Tianjin University</a>. I received my PhD in 2024 from Renmin University of China, under the supervision of Professor <a href="http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/06f9baa19a6b43a9897c773886be5702.htm" target="_blank">Yunpeng Chai</a>. I currently serve as an Executive Committee Member for the CCF Database Committee and Information Systems Committee.
                 I have long been dedicated to research in intelligent database technology (AI4DB) and intelligent data management technology. I have published over 10 papers in important domestic and international academic conferences and journals such as SIGMOD, ICDE, and WWW, and I serve as a reviewer for journals and conferences like TKDE.
                 I have been selected for the 2025 China Computer Federation Information Systems Committee PhD Thesis Incentive Program, the National Postdoctoral Researcher Program, the Joint Funding from China Postdoctoral Science Foundation and Tianjin City (Special Funding), and the Tianjin City Postdoctoral Innovation Position Funding. Additionally, I received the Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024) and funding from Renmin University of China's Outstanding Innovative Talent Program.
@@ -209,7 +242,7 @@
                     <li>Artificial Intelligence for Database (AI4DB), i.e., Learned index, Auto-tuning</li>
                     <li>Intelligent Data Management Techniques</li>
                     <li>Auto-scaling</li>
-<!--                     <li>Time series data prediction</li> -->
+<!-- <li>Time series data prediction</li> -->
                 </ul>
             </div>
             <!-- Publications Section -->
@@ -246,11 +279,11 @@
                 <h2 class="section-title">Honors</h2>
                 <ul>
                     <li><strong>Third Batch of Joint Funding from China Postdoctoral Science Foundation and Tianjin City (Special Funding)</strong> (August 29, 2025)
-                    <li><strong>Tianjin City Postdoctoral Innovation Position Funding</strong> (August 29, 2025) 
+                    <li><strong>Tianjin City Postdoctoral Innovation Position Funding</strong> (August 29, 2025)
                     <li><strong>2025 China Computer Federation Information Systems Committee PhD Thesis Incentive Program</strong> (July 22, 2025)
                     <li><strong>2025 National Postdoctoral Researcher Program (Class C)</strong> (July 16, 2025)
-                    <li><strong>Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024)</strong> (August 26, 2024)  
-                    <li><strong>Funding from Renmin University of China's Outstanding Innovative Talent Program</strong> (November 1, 2021) 
+                    <li><strong>Best Paper Award at the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024)</strong> (August 26, 2024)
+                    <li><strong>Funding from Renmin University of China's Outstanding Innovative Talent Program</strong> (November 1, 2021)
                 </ul>
             </div>
         </div>
@@ -270,7 +303,7 @@
                     <li>智能数据库系统 (AI4DB)——学习索引、自动调优</li>
                     <li>智能数据管理技术</li>
                     <li>云资源弹性伸缩</li>
-<!--                     <li>时间序列数据预测</li> -->
+<!-- <li>时间序列数据预测</li> -->
                 </ul>
             </div>
             <!-- Publications Section -->
@@ -307,11 +340,11 @@
                 <h2 class="section-title">获得荣誉</h2>
                 <ul>
                     <li><strong>第3批中国博士后科学基金会与天津市联合资助（特别资助）</strong>（2025年8月29日）
-                    <li><strong>天津市博士后创新岗位资助</strong>（2025年8月29日）  
+                    <li><strong>天津市博士后创新岗位资助</strong>（2025年8月29日）
                     <li><strong>2025年度中国计算机学会信息系统专委会博士学位论文激励计划</strong>（2025年7月22日）
-                    <li><strong>2025年度国家资助博士后研究人员计划（C档）</strong>（2025年7月16日）  
-                    <li><strong>第3届大规模图数据分析国际研讨会（LSGDA 2024）最佳论文奖</strong>（2024年8月26日）  
-                    <li><strong>中国人民大学拔尖创新人才计划资助</strong>（2021年11月01日）  
+                    <li><strong>2025年度国家资助博士后研究人员计划（C档）</strong>（2025年7月16日）
+                    <li><strong>第3届大规模图数据分析国际研讨会（LSGDA 2024）最佳论文奖</strong>（2024年8月26日）
+                    <li><strong>中国人民大学拔尖创新人才计划资助</strong>（2021年11月01日）
                 </ul>
             </div>
         </div>
@@ -330,3 +363,4 @@
     </script>
 </body>
 </html>
+```
